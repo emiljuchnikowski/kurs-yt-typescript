@@ -1,6 +1,8 @@
 if (true) {
-    let zminna1: number = 2;
-    zminna1 = 3;
+    let zmienna1: string = "zmienna 1";
+    zmienna1 = "zmienna 1 po podmianie drugi raz";
+    const element1 = document.getElementById('element1') as HTMLElement;
+    element1.innerText = zmienna1;
 }
 
 if (true) {
