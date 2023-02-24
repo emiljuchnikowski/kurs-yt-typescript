@@ -6,11 +6,11 @@ if (true) {
 }
 
 if (true) {
-    var zmienna2: number = 4;
+    var zmienna: number = 4;
 }
 
-zmienna2 = 5;
+zmienna = 5;
 
 if (true) {
-    const zmienna3: number = 6;
+    const zmienna: number = 6;
 }

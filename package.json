@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "npx tsc src/*.ts --outDir dist --watch"
+    "watch": "npx tsc src/*.ts --out dist/index.js --watch"
   },
   "dependencies": {
     "typescript": "^4.9.5"
