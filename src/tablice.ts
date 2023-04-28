@@ -10,11 +10,15 @@ przyciskDoDodaniaDoTablicy?.addEventListener('click', function () {
 
     let html = '';
 
-    for(let index = 0; index < tablica.length; index++) {
-        const elementTablicy = tablica[index];
+    // for(let index = 0; index < tablica.length; index++) {
+    //     const elementTablicy = tablica[index];
 
+    //     html += "<li>" + elementTablicy + "</li>";
+    // }
+
+    tablica.forEach(function (elementTablicy) {
         html += "<li>" + elementTablicy + "</li>";
-    }
+    });
 
     if (listaElementowTablicy) {
         listaElementowTablicy.innerHTML = html;
