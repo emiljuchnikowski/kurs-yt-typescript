@@ -1,4 +1,8 @@
-function renderujTekst(idElmentu: string, tekst: string): void {
+// function renderujTekst(idElmentu: string, tekst: string): void {
+//     const element = document.getElementById(idElmentu) as HTMLElement;
+//     element.innerText = tekst;
+// }
+const renderujTekst = (idElmentu: string, tekst: string): void => {
     const element = document.getElementById(idElmentu) as HTMLElement;
     element.innerText = tekst;
 }
