@@ -3,29 +3,23 @@ interface Pojazd {
     opiszStan(): string;
 }
 
-interface Samochod extends Pojazd {
-    licznik: number;
-}
-
-class Bmw implements Samochod {
+abstract class Samochod implements Pojazd {
     licznik: number = 0;
 
     jedz(km: number): void {
         this.licznik += km;
     }
 
+    abstract opiszStan(): string;
+}
+
+class Bmw extends Samochod {
     opiszStan(): string {
         return "Przebieg auta (bmw): " + this.licznik + " km";
     }
 }
 
-class Opel implements Samochod {
-    licznik: number = 0;
-
-    jedz(km: number): void {
-        this.licznik += km;
-    }
-
+class Opel extends Samochod {
     opiszStan(): string {
         return "Przebieg auta (opel): " + this.licznik + " km";
     }
