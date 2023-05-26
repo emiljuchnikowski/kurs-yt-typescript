@@ -4,24 +4,32 @@ interface Pojazd {
 }
 
 abstract class Samochod implements Pojazd {
-    licznik: number = 0;
+    private licznik: number = 0;
 
     jedz(km: number): void {
         this.licznik += km;
     }
 
+    pobierzStanLicznika(): number {
+        return this.licznik;
+    }
+
     abstract opiszStan(): string;
+
+    protected zwrocSformatowanyStan(marka: string): string {
+        return "Przebieg auta (" + marka + "): " + this.licznik + " km";
+    }
 }
 
 class Bmw extends Samochod {
     opiszStan(): string {
-        return "Przebieg auta (bmw): " + this.licznik + " km";
+        return this.zwrocSformatowanyStan("bmw");
     }
 }
 
 class Opel extends Samochod {
     opiszStan(): string {
-        return "Przebieg auta (opel): " + this.licznik + " km";
+        return this.zwrocSformatowanyStan("opel");
     }
 }
 
@@ -29,3 +37,5 @@ let samochod1: Samochod = new Bmw();
 samochod1.jedz(100);
 samochod1 = new Opel();
 samochod1.jedz(100);
+
+const stanLicznika = samochod1.pobierzStanLicznika();
