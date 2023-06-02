@@ -27,6 +27,19 @@ class Bmw extends Samochod {
     }
 }
 
+class BmwWLeasingu extends Bmw {
+    constructor(
+        public leasingDlaFirmy: string
+    ) {
+        super();
+    }
+
+    override opiszStan(): string {
+        const stanBazowy = super.opiszStan();
+        return stanBazowy + ', leasing dla firmy: ' + this.leasingDlaFirmy;
+    }
+}
+
 class Opel extends Samochod {
     opiszStan(): string {
         return this.zwrocSformatowanyStan("opel");
